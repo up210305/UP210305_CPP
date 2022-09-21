@@ -11,15 +11,15 @@ int main()
 
     cout<< "Este programa muestra el ingreso de datos por el usuario. \n";
     cout<< "Ingresa un dato tipo entero: ";
-    cin>> entero;
-    cout<< "El dato ingresado es: "<< entero <<endl;
+    cin>> flotante;
+    cout<< "El dato ingresado es: "<< flotante <<endl;
 
     cout<< "====================="<<endl;
 
     printf("Usando la funcion print scanf\n");
     printf("Ingresa un dato de tipo entero: ");
-    scanf("%d", &entero);
-    printf("El dato ingresado es: %i \n", entero);
+    scanf("%f", &flotante);
+    printf("El dato ingresado es: %f \n", flotante);
 
     return 0;
 }
