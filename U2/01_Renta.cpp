@@ -1,3 +1,18 @@
+/*
+Date: 22/09/2022 
+Author: Alan
+Email: UP210305@alumnos.upa.edu.mx
+Description: Rent discounts.
+Last Modification: 26/09/2022
+*/
+
+//------------ PREPROCESSOR DIRECTIVES ----------------
+#include <iostream>
+
+using namespace std;
+
+//---------------------- ISSUE -------------------------
+
 /* 
 Los tramos impositivos para la declaracion de la renta
 en un determinado pais osn los siguientes:
@@ -12,19 +27,19 @@ Mas de $60,000 45%
 Escribir un programa que pregunte al usuario su renta anual 
 y muestre por pantalla el tipo impositivo que le corresṕonde.
 */
-#include <iostream>
 
-using namespace std;
-
+//----------------------FUNCTION ----------------------
 void declarar(float cantidad, float porcentaje, float rentaInteres){
     
     float interes;
     
     interes = cantidad*rentaInteres;
-    rentaInteres = (porcentaje/cantidad)*100;
+    rentaInteres = (interes/cantidad)*100;
     cout<< "Tu impuesto es de "<< rentaInteres << "%" <<endl;
     cout << "Impuesto a pagar: " << interes;
 }
+
+//------------------ MAIN FUNCTION --------------------
 
 int main()
 {
@@ -53,7 +68,6 @@ int main()
     else if (renta>=60000)
     {
         declarar(renta, 45, .45);
-
     }
 
 }
