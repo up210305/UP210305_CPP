@@ -33,67 +33,72 @@ int main(){
     int pizza;
     int opcion;
 
-    cout << "Menu" << endl;
+    cout << "Menu\n" << endl;
     cout << "1. Vegetarian Pizza" << endl;
     cout << "2. Classic Pizza" << endl; 
-    cout << "What pizza do you want?" << endl;
+    cout << "What pizza do you want? ";
     cin >>pizza;
 
     if (pizza==1)
     {
-        cout << "Ingredients";
+        cout << "Ingredients\n"<< endl;
         cout << "1. Pepper" << endl;
         cout << "2. Tofu" << endl;
-        cout << "3. Exit" << endl;
+        cout << "3. Exit\n" << endl;
 
-        cout << "Enter the ingredient do you want" << endl;
+        cout << "Enter the ingredient do you want? ";
         cin >> opcion;
-        switch (opcion)
+        if (opcion==1)
         {
-            case 1:
-                cout << "Your pizza is vegetarian with tofu and tomatoe sauce";
-            break;
-            case 2:
-                cout << "Your pizza is vegetarian with tofu and tomatoe sauce";
-            break;
-            case 3:
-                system("PAUSE");
-            break;
-            default:
-                cout << "Your ingredients is invalid";
-            break;
+            cout << "Your pizza is vegetarian with tofu and tomatoe sauce";
+        }
+        else if (opcion==2)
+        {
+            cout << "Your pizza is vegetarian with tofu and tomatoe sauce";
+        }
+        else if (opcion==3)
+        {
+            system("PAUSE");
+        }
+        else{
+            cout << "Your ingredient is invalid";
         }
         
     }
+
     else if (pizza==2)
     {
-        cout << "Ingredients";
+        cout << "Ingredients\n"<< endl;
         cout << "1. Peperoni" << endl;
-        cout << "2. Jam" << endl;
+        cout << "2. Ham" << endl;
         cout << "3. Salmon" << endl;
-        cout << "4. Exit" << endl;
+        cout << "4. Exit\n" << endl;
 
         cout << "Enter the ingredient do you want"<< endl;
         cin >> opcion;
-        switch (opcion)
+        if (opcion==1)
         {
-            case 1:
-                cout << "Your pizza is classic with peperoni, mozzarella and tomatoe sauce";
-            break;
-            case 2:
-                cout << "Your pizza is classic with jam, mozzarella and tomatoe sauce";
-            break;
-            case 3:
-                cout << "Your pizza is classic with salmon, mozzarella and tomatoe sauce";
-            break;
-            case 4:
-                system("PAUSE");
-            break;
-
-            default:
-                cout << "Your ingredients is invalid";
-            break;
+            cout << "Your pizza is classic with peperoni, mozzarella and tomatoe sauce";
         }
+        else if (opcion==2)
+        {
+            cout << "Your pizza is classic with jam, mozzarella and tomatoe sauce";
+        }
+        else if (opcion==3)
+        {
+            cout << "Your pizza is classic with salmon, mozzarella and tomatoe sauce";
+        }
+        else if (opcion==4)
+        {
+            system("PAUSE");
+        }
+        else{
+            cout << "Your ingredient is invalid";
+        }
+
+    }
+    else{
+        cout << "Your pizza is invalid";
     }
 
 

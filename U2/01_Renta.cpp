@@ -35,8 +35,8 @@ void declarar(float cantidad, float porcentaje, float rentaInteres){
     
     interes = cantidad*rentaInteres;
     rentaInteres = (interes/cantidad)*100;
-    cout<< "Tu impuesto es de "<< rentaInteres << "%" <<endl;
-    cout << "Impuesto a pagar: " << interes;
+    cout<< "Your tax is "<< rentaInteres << "%" <<endl;
+    cout << "Tax to pay " << interes;
 }
 
 //------------------ MAIN FUNCTION --------------------

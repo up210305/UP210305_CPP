@@ -38,25 +38,25 @@ int main()
 {
     double puntuacion;
     double dinero;
-    cout << "¿Cual es tu puntuacion? " << endl;
+    cout << "What is your puntuation? " << endl;
     cin >> puntuacion;
     if((puntuacion==0.0)||(puntuacion==0.4)||(puntuacion>=0.6)){
         dinero = puntuacion*2400;
         if(puntuacion==0.0)
         {
-            cout << "Tu nivel de rendimiento es inaceptable" << endl;
+            cout << "Your level of performance is unacceptable" << endl;
         
         }else if (puntuacion==0.4)
         {
-            cout << "Tu nivel de rendimiento es aceptable" << endl;
+            cout << "Your level of performance is acceptable" << endl;
         }else if (puntuacion>=0.6)
         {
-            cout << "Tu nivel de rendimiento es meritorio" << endl;
+            cout << "Your level of performance is meritorious" << endl;
         }
-        cout << "El dinero que recibiras es $" << dinero << endl;
+        cout << "The money you will get is $" << dinero << endl;
         
     }else{
-        cout << "La puntuacion ingresada es invalida";
+        cout << "The performance you enter is invalid";
     }
 
     
