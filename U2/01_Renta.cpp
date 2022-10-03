@@ -15,7 +15,7 @@ using namespace std;
 
 /* 
 Los tramos impositivos para la declaracion de la renta
-en un determinado pais osn los siguientes:
+en un determinado pais son los siguientes:
 
 Renta Tipo impositivo
 Menos de $10,000 5%
@@ -45,7 +45,7 @@ int main()
 {
     float renta;
 
-    cout << "¿Cual es tu renta anual? ";
+    cout << "What is your annual income? ";
     cin >> renta;
 
     if (renta<10000)
