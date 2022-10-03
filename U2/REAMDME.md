@@ -52,16 +52,24 @@
 ## Test
 
 ### A) Less than $10,000
-<img src="images/e1.PNG" align="center" height="150" width="700"/>
+<p align="justify"> 
 
-### B) Between $10,000 and $20,000
-<img src="images/e2.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e1.jpg" height="150" width="700" />
 
-### B) Between $20,000 and $35,000
-<img src="images/e3.PNG" align="center" height="150" width="700"/>
+
+</p>
+
+
+### B) Between $10,000-$20,000
+
+<img src="../imagenes/e2.PNG"  align="center" height="150" width="400"/>
+
+### B) Between $20,000-$35,000
+
+<img src="../imagenes/e3.PNG" align="center" height="150" width="400"/>
 
 ### B) More than $60,000
-<img src="images/e4.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e4.PNG" align="center" height="150" width="400"/>
 
 # Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money
 
@@ -103,13 +111,13 @@
 ## Test
 
 ### A) Puntuation 0.0
-<img src="images/e5.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e5.PNG" align="center" height="150" width="400"/>
 
 ### B) Puntuation 0.4
-<img src="images/e6.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e6.PNG" align="center" height="150" width="400"/>
 
 ### C) Puntuation 0.6
-<img src="images/e7.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e7.PNG" align="center" height="150" width="400"/>
 
 # Exercise 3: A program that asks for your age and print the cost of ticked.
 
@@ -150,16 +158,16 @@
 ## Test
 
 ### A) Below 4
-<img src="images/e8.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e8.PNG" align="center" height="150" width="400"/>
 
 ### B) More than 4 and less than 18
-<img src="images/e9.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e9.PNG" align="center" height="150" width="400"/>
 
 ### C) More than 18
-<img src="images/e10.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e10.PNG" align="center" height="150" width="400"/>
 
 ### D) Invalid age
-<img src="images/e11.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e11.PNG" align="center" height="150" width="400"/>
 
 # Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has
 
@@ -253,13 +261,13 @@
 ## Test
 
 ### A) Vegetarian pepper
-<img src="images/e12.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e12.PNG" align="center" height="300" width="400"/>
 
 ### B) Vegetarian tofu
-<img src="images/e13.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e13.PNG" align="center" height="300" width="400"/>
 
 ### C) Pizza pepperoni
-<img src="images/e14.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e14.PNG" align="center" height="300" width="400"/>
 
 ### D) Pizza salmon
-<img src="images/e15.PNG" align="center" height="150" width="700"/>
+<img src="../imagenes/e15.PNG" align="center" height="300" width="400"/>
