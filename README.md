@@ -1,3 +1,4 @@
+$ \ color {black} {palabra roja} $
 <p align="center"> 
   <img src="images/alan-logo.png" alt="HAR Logo" width="80px" height="80px">
 </p>
