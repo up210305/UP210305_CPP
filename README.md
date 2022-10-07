@@ -1,4 +1,3 @@
-$ \ color {black} {palabra roja} $
 <p align="center"> 
   <img src="images/alan-logo.png" alt="HAR Logo" width="80px" height="80px">
 </p>
@@ -60,6 +59,7 @@ $ \ color {black} {palabra roja} $
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try) <br>
 -->
 <!--This project is written in Python programming language. <br>-->
+
 Hobbies:
 * Read manga
 * Watch movies and series
