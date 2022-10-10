@@ -1,4 +1,4 @@
-# Exercise 1: A program that asks the user for his annual rent and displays the corresponding tax.
+## Exercise 1: A program that asks the user for his annual rent and displays the corresponding tax.
 
 ```c++
     //Request for rent
@@ -41,21 +41,20 @@
 
 ```
 ## Explanation of the exercise 1
-1. Ask the user for his annual rent.
-2. If the anual rent is less than $10,000 it's 5%
-3. If the anual rent is between $10,000 and $20,000 it's 15%
-4. If the anual rent is between $20,000 and $35,000 it's 20%
-5. If the anual rent is between $35,000 and $60,000 it's 30 %
-6. If the anual rent is more than $60,000 it's 45%
-7. Print the porcent of tax and the tax to pay.
+>__1.__ Ask the user for his annual rent.
+__2.__ If the anual rent is less than $10,000 it's 5%.
+__3.__ If the anual rent is between $10,000 and $20,000 it's 15%.
+__4.__ If the anual rent is between $20,000 and $35,000 it's 20%.
+__5.__ If the anual rent is between $35,000 and $60,000 it's 30%.
+__6.__ If the anual rent is more than $60,000 it's 45%.
+__7.__ Print the porcent of tax and the tax to pay.
 
 ## Test
 
 ### A) Less than $10,000
 <p align="justify"> 
 
-<img src="../imagenes/e1.jpg" height="150" width="700" />
-
+<img src="../imagenes/e1.jpg" height="150" width="400" />
 
 </p>
 
@@ -71,7 +70,7 @@
 ### B) More than $60,000
 <img src="../imagenes/e4.PNG" align="center" height="150" width="400"/>
 
-# Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money
+## Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money
 
 ```c++
     //Ask the puntuation of the user
@@ -100,13 +99,13 @@
 
 ```
 
-## Explanation of the exercise 2
-1. Ask the puntuation of the user.
-2. Check that the user entered a score more than or equal to 0.6 or equal to 0.4 or equal to 0.0
-3. If the user does not enter a valid score print Your score is unacceptable message.
-4. Multiply the score by 2400 and get the cash value.
-5. Check what kind of score you got depending on your performance
-6. Print the amount of money.
+### Explanation of the exercise 2
+>__1.__ Ask the puntuation of the user.
+__2.__ Check that the user entered a score more than or equal to 0.6 or equal to 0.4 or equal to 0.0
+__3.__ If the user does not enter a valid score print Your score is unacceptable message.
+__4.__ Multiply the score by 2400 and get the cash value.
+__5.__ Check what kind of score you got depending on your performance
+__6.__ Print the amount of money.
 
 ## Test
 
@@ -119,7 +118,7 @@
 ### C) Puntuation 0.6
 <img src="../imagenes/e7.PNG" align="center" height="150" width="400"/>
 
-# Exercise 3: A program that asks for your age and print the cost of ticked.
+## Exercise 3: A program that asks for your age and print the cost of ticked.
 
 ```c++
     // Enter your age 
@@ -147,13 +146,13 @@
     // Print the cost of the ticked.
     cout << "The cost of your ticked is $" << precio << endl;
 ```
-## Explanation of the exercise 3
-1. Ask the age of the user.
-2. If the age is between 4 and 0, the ticket price is 0 bucks.  
-3. If the age is more than 4 and less than 18, the ticket price is 5 bucks.  
-3. If the age is more than 18, the ticket price is 10 bucks.
-3. If the age lower than 0, you will see a message "Your age is invalid".  
-7. Print the ticket cost. 
+### Explanation of the exercise 3
+>__1.__ Ask the age of the user.
+__2.__ If the age is between 4 and 0, the ticket price is 0 bucks.  
+__3.__ If the age is more than 4 and less than 18, the ticket price is 5 bucks.  
+__4.__ If the age is more than 18, the ticket price is 10 bucks.
+__5.__ If the age lower than 0, you will see a message "Your age is invalid".  
+__6.__ Print the ticket cost. 
 
 ## Test
 
@@ -169,7 +168,7 @@
 ### D) Invalid age
 <img src="../imagenes/e11.PNG" align="center" height="150" width="400"/>
 
-# Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has
+## Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has
 
 ```c++
 
@@ -249,14 +248,14 @@
 
 ```
 
-## Explanation of the exercise 4
-1. Ask the user what type of pizza user prefers. 
-2. Display the menu depending on your type of pizza.
-3. If he selects 1 he enters the vegetarian ingredients menu.  
-4. If he selects 2 he enters the no vegetarian ingredients menu. 
-5. If any number but 1 or 2 is selected it prints "Your pizza is invalid".   
-3. Ask what ingredients you want on your pizza.
-4. Print the type of your pizza and the ingredients it has.
+### Explanation of the exercise 4
+>__1.__ Ask the user what type of pizza user prefers. 
+__2.__ Display the menu depending on your type of pizza.
+__3.__ If he selects 1 he enters the vegetarian ingredients menu.  
+__4.__ If he selects 2 he enters the no vegetarian ingredients menu. 
+__5.__ If any number but 1 or 2 is selected it prints "Your pizza is invalid".   
+__6.__ Ask what ingredients you want on your pizza.
+__7.__ Print the type of your pizza and the ingredients it has.
 
 ## Test
 
