@@ -30,7 +30,7 @@ int main(){
 
     do
     {
-        cout << "give me the temperature" << endl;
+        cout << "Give me the temperature?" << endl;
         cin >> temperatura;
         tempeAcum +=temperatura;
 
@@ -45,9 +45,9 @@ int main(){
         }
     } while (contador <=6);
     
-    cout << "the average of temperature today is : " << tempeAcum/6 <<endl;
+    cout << "The average of temperature today is : " << tempeAcum/6 <<endl;
     cout << "The least temperature is " << temperatura_min<< endl;
-    cout << "The maximun temperature is " << temperatura_max << endl;
+    cout << "The maximun temperature is " << temperatura_max << endl<<"\n";
 
 
     return 0;

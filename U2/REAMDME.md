@@ -270,3 +270,190 @@ __7.__ Print the type of your pizza and the ingredients it has.
 
 ### D) Pizza salmon
 <img src="../imagenes/e15.PNG" align="center" height="300" width="400"/>
+
+## Exercise 5: Make a program in which 6 temperatures are entered and determine the average, the most low and the highest.
+
+```c++
+
+int main(){
+    float temperatura;
+    int contador = 1;
+    float tempeAcum = 0;
+    int temperatura_min = 9999, temperatura_max = -9999;
+
+    do
+    {
+        cout << "Give me the temperature?" << endl;
+        cin >> temperatura;
+        tempeAcum +=temperatura;
+
+        contador ++;
+        if (temperatura <= temperatura_min)
+        {
+            temperatura_min=temperatura;
+        }
+        if (temperatura >= temperatura_max)
+        {
+            temperatura_max=temperatura;
+        }
+    } while (contador <=6);
+    
+    cout << "The average of temperature today is : " << tempeAcum/6 <<endl;
+    cout << "The least temperature is " << temperatura_min<< endl;
+    cout << "The maximun temperature is " << temperatura_max << endl;
+
+
+    return 0;
+}
+
+```
+### Explanation of the exercise 5
+>__1.__ Ask the user a temperature. 
+__2.__ Compare the temperatures you enter.
+__3.__ Print the average of temperature today.  
+__4.__ Print the least temperature. 
+__5.__ Print the maximun temperature.   
+
+## Test
+
+### A) Same temperature
+<img src="../imagenes/e16.png" align="center" height="300" width="500"/>
+
+### B) Differents temperatures
+<img src="../imagenes/e17.png" align="center" height="300" width="500"/>
+
+### C) Negative temperatures
+<img src="../imagenes/e18.png" align="center" height="300" width="500"/>
+
+## Exercise 6: Make a program that reads indefinitely quantities of products and their price, and at the end indicate the total of the invoice.
+
+```c++
+
+int main(){
+
+    int producto=1;
+    float precio;
+    float total = 0;
+    do
+    {
+        
+        cout << "Enter the amount of products: ";
+        cin >> producto;
+        
+        if (producto!=0 & producto>0)
+        {
+            cout << "Enter the price of the product: ";
+            cin >> precio;
+
+            total += producto*precio;
+        }
+        
+        
+
+    } while (producto > 0 & precio>=0);
+    cout << "The bill is: \n";
+    cout << "Total account is: " << total << "\n";
+    
+}
+
+```
+### Explanation of the exercise 6
+>__1.__ Enter the amounts of products. 
+__2.__ Enter the price of the product
+__3.__ Make an operation of the quantity of product and its price.  
+__4.__ Print the bill. 
+__5.__ Print the totalo account.   
+
+## Test
+
+### A) One product
+<img src="../imagenes/e19.png" align="center" height="70" width="317"/>
+
+### B) Differents products
+<img src="../imagenes/e20.png" align="center" height="171" width="348"/>
+
+## Exercise 7: Write a program that performs the conversion from decimal to binary, only for integers greater than 0
+
+```c++
+
+int main(){
+    string resultado;
+    int numero;
+
+    cout << "Enter the number you want to convert to binary? ";
+    cin >> numero;
+    while (numero != 0)
+    {
+        resultado = (numero%2==0)? "0" + resultado: "1" + resultado;
+        numero/=2;
+        
+    }
+    cout << "Your number in binary is " << resultado<< "\n";
+    
+}
+
+```
+### Explanation of the exercise 7
+>__1.__ Enter the number you want to convert to binary. 
+__2.__ Print the number in binary.
+   
+
+## Test
+
+### A) Number 12
+<img src="../imagenes/e21.png" align="center" height="47" width="450"/>
+
+### B) Number 50
+<img src="../imagenes/e22.png" align="center" height="47" width="414"/>
+
+
+## Exercise 8: 
+
+```c++
+
+int main(){
+
+    int numero;
+    int tabla;
+
+    cout<<"What number do you want your table?"<<endl;
+    cin>>tabla;
+
+    cout<<"Until what number do you want your table?"<<endl;
+    cin>>numero;
+    cout<<"\n";
+    for (int i = 0; i <= numero; i++)
+    {
+        
+        cout<<"|";
+        for (int j = 0; j <= 38; j++)
+        {
+            cout<<"-";
+            
+
+        }
+        cout<<"|\t";
+
+        cout<<"\n";
+
+        cout<<"|\t"<<i<<"    X    "<<tabla<<"    =    "<<tabla*i<<"    \t|"<<endl;
+
+        
+    }
+    
+}
+
+```
+### Explanation of the exercise 8
+>__1.__ Enter the number you want to convert to binary. 
+__2.__ Print the bnumber in binary.
+   
+
+## Test
+
+### A) Table of 5
+<img src="../imagenes/e23.png" align="center" height="443" width="380"/>
+
+### B) Table of 50
+<img src="../imagenes/e24.png" align="center" height="284" width="352"/>
+

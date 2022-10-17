@@ -46,7 +46,6 @@ int main(){
         
 
     } while (producto > 0 & precio>=0);
-    cout << "The bill is: \n";
     cout << "Total account is: " << total << "\n";
     
     

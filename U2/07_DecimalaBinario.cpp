@@ -16,7 +16,7 @@ using namespace std;
 
 /*
 
-Realice un programa que realice la conversión de binario a decimal, solo para números
+Realice un programa que realice la conversión de decimal a binario, solo para números
 enteros mayores a 0. El resultado puede ser mostrado mediante una variable entera o en un
 conjunto de caracteres.
 
@@ -37,6 +37,6 @@ int main(){
         numero/=2;
         
     }
-    cout << "Your number in binary is " << resultado;
+    cout << "Your number in binary is " << resultado<< "\n";
     
 }
