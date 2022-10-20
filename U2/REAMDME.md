@@ -1,3 +1,18 @@
+# Contenidos
+<details open="open">
+  <ol>
+    <li><a href="## Exercise 1: A program that asks the user for his annual rent and displays the corresponding tax.">  ➤ Exercise 1</a></li>
+    <li><a href="## Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money.">  ➤ Exercise 2</a></li>
+    <li><a href="## Exercise 3: A program that asks for your age and print the cost of ticked.">  ➤ Exercise 3</a></li>
+    <li><a href="## Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has.">  ➤ Exercise 4</a></li>
+    <li><a href="## Exercise 5: Make a program in which 6 temperatures are entered and determine the average, the most low and the highest.">  ➤ Exercise 5</a></li>
+    <li><a href="## Exercise 6: Make a program that reads indefinitely quantities of products and their price, and at the end indicate the total of the invoice.">  ➤ Exercise 6</a></li>
+    <li><a href="## Exercise 7: Write a program that performs the conversion from decimal to binary, only for integers greater than 0.">  ➤ Exercise 7</a></li>
+    <li><a href="## Exercise 8: Tables of multiplication.">  ➤ Exercise 8</a></li>
+    <li><a href="## Exercise 9: Bisection method.">  ➤ Exercise 9</a></li>
+  </ol>
+</details>
+
 ## Exercise 1: A program that asks the user for his annual rent and displays the corresponding tax.
 
 ```c++
@@ -70,7 +85,7 @@ __7.__ Print the porcent of tax and the tax to pay.
 ### B) More than $60,000
 <img src="../imagenes/e4.PNG" align="center" height="150" width="400"/>
 
-## Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money
+## Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money.
 
 ```c++
     //Ask the puntuation of the user
@@ -168,7 +183,7 @@ __6.__ Print the ticket cost.
 ### D) Invalid age
 <img src="../imagenes/e11.PNG" align="center" height="150" width="400"/>
 
-## Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has
+## Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has.
 
 ```c++
 
@@ -372,7 +387,7 @@ __5.__ Print the totalo account.
 ### B) Differents products
 <img src="../imagenes/e20.png" align="center" height="171" width="348"/>
 
-## Exercise 7: Write a program that performs the conversion from decimal to binary, only for integers greater than 0
+## Exercise 7: Write a program that performs the conversion from decimal to binary, only for integers greater than 0.
 
 ```c++
 
@@ -407,7 +422,7 @@ __2.__ Print the number in binary.
 <img src="../imagenes/e22.png" align="center" height="47" width="414"/>
 
 
-## Exercise 8: 
+## Exercise 8: Tables of multiplication.
 
 ```c++
 
@@ -445,9 +460,9 @@ int main(){
 
 ```
 ### Explanation of the exercise 8
->__1.__ Enter the number you want to convert to binary. 
-__2.__ Print the bnumber in binary.
-   
+>__1.__ Enter the number you want your table. 
+__2.__ Enter the number until you want your table.
+__3.__ Print a table of multiplication.
 
 ## Test
 
@@ -457,3 +472,96 @@ __2.__ Print the bnumber in binary.
 ### B) Table of 50
 <img src="../imagenes/e24.png" align="center" height="284" width="352"/>
 
+## Exercise 9: Bisection method.
+
+```c++
+
+int main(){
+
+    float resolver(float num)
+{
+    return (pow(num, 2) - num - 12);
+}
+
+int imprimir()
+{
+    for (int i = 0; i < 161; i++)
+    {
+        cout << "-";
+    }
+    cout << "\n";
+    return 0;
+}
+
+int main()
+{   
+
+    int interador = 1;
+    int sol = 1;
+    float margen = 0.00001;
+    float a, b, c, ya, yb, yc;
+
+    cout << "Type the value A: ";
+    cin >> a;
+    cout << "Type the value B: ";
+    cin >> b;
+
+    imprimir();
+    cout << "| Interdor \t| a \t\t\t| b \t\t\t| c \t\t\t| y(a)\t\t\t| y(b)\t\t\t| y(c)\t\t\t| \n";
+    imprimir();
+
+    do
+    {
+        c = (a + b) / 2;
+        ya = resolver(a);
+        yb = resolver(b);
+        yc = resolver(c);
+
+        cout << "| " << interador << "\t\t| " << fixed << setprecision(8) << a << "\t\t| " << b << "\t\t| " << c << "\t\t| " << ya << "\t\t| " << yb << "\t\t| " << yc << "\t\t| \n";
+        imprimir();
+
+        if ((ya * yc) < 0)
+        {
+            b = c;
+        }
+        else {
+            a=c;
+        }
+        if (a==b){
+            sol = 0;
+            break;
+        }
+        
+        interador++;
+    } while ( abs(yc)>= margen);
+
+    if (sol != 0)
+    {
+        cout << "The root is :" << c;
+        cout << "\n";
+    }
+    else
+    {
+        cout << "There is no root in that range. \n";
+    }
+    return 0;
+
+    system("Color E4");
+
+}
+
+```
+### Explanation of the exercise 9
+>__1.__ Enter the valuye of A and B. 
+__2.__ Get the value of C.
+__3.__ Get the y-values when its value is a, b and c.
+__4.__ Print the table of bisection method.
+__5.__ Print the root.
+
+## Test
+
+### A) 1-9
+<img src="../imagenes/e25.png" align="center" height="443" width="380"/>
+
+### B) 1-12
+<img src="../imagenes/e26.png" align="center" height="284" width="352"/>
