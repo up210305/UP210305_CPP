@@ -1,19 +1,10 @@
-# Contenidos
-<details open="open">
-  <ol>
-    <li><a href="## Exercise 1: A program that asks the user for his annual rent and displays the corresponding tax.">  ➤ Exercise 1</a></li>
-    <li><a href="## Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money.">  ➤ Exercise 2</a></li>
-    <li><a href="## Exercise 3: A program that asks for your age and print the cost of ticked.">  ➤ Exercise 3</a></li>
-    <li><a href="## Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has.">  ➤ Exercise 4</a></li>
-    <li><a href="## Exercise 5: Make a program in which 6 temperatures are entered and determine the average, the most low and the highest.">  ➤ Exercise 5</a></li>
-    <li><a href="## Exercise 6: Make a program that reads indefinitely quantities of products and their price, and at the end indicate the total of the invoice.">  ➤ Exercise 6</a></li>
-    <li><a href="## Exercise 7: Write a program that performs the conversion from decimal to binary, only for integers greater than 0.">  ➤ Exercise 7</a></li>
-    <li><a href="## Exercise 8: Tables of multiplication.">  ➤ Exercise 8</a></li>
-    <li><a href="## Exercise 9: Bisection method.">  ➤ Exercise 9</a></li>
-  </ol>
-</details>
+<h1 align="center"> Contents</h1>
+  
+### Exercise 1: A program that asks the user for his annual rent and displays the corresponding tax.
+<details close="open" >
+  <summary>Details</summary>
 
-## Exercise 1: A program that asks the user for his annual rent and displays the corresponding tax.
+
 
 ```c++
     //Request for rent
@@ -85,7 +76,13 @@ __7.__ Print the porcent of tax and the tax to pay.
 ### B) More than $60,000
 <img src="../imagenes/e4.PNG" align="center" height="150" width="400"/>
 
-## Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money.
+</details>
+
+### Exercise 2: A program that asks the user for his score and displays the corresponding type of benefit and money.
+
+<details close="open">
+  <summary>Details</summary>
+
 
 ```c++
     //Ask the puntuation of the user
@@ -133,7 +130,13 @@ __6.__ Print the amount of money.
 ### C) Puntuation 0.6
 <img src="../imagenes/e7.PNG" align="center" height="150" width="400"/>
 
-## Exercise 3: A program that asks for your age and print the cost of ticked.
+</details>
+
+### Exercise 3: A program that asks for your age and print the cost of ticked.
+
+<details close="open">
+  <summary>Details</summary>
+
 
 ```c++
     // Enter your age 
@@ -161,6 +164,7 @@ __6.__ Print the amount of money.
     // Print the cost of the ticked.
     cout << "The cost of your ticked is $" << precio << endl;
 ```
+
 ### Explanation of the exercise 3
 >__1.__ Ask the age of the user.
 __2.__ If the age is between 4 and 0, the ticket price is 0 bucks.  
@@ -182,8 +186,12 @@ __6.__ Print the ticket cost.
 
 ### D) Invalid age
 <img src="../imagenes/e11.PNG" align="center" height="150" width="400"/>
+</details>
 
-## Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has.
+### Exercise 4: Menu of a restaurant called Bella Napoli Pizzeria showing your type of pizza and the ingredients it has.
+
+<details close="open">
+  <summary>Details</summary>
 
 ```c++
 
@@ -286,7 +294,13 @@ __7.__ Print the type of your pizza and the ingredients it has.
 ### D) Pizza salmon
 <img src="../imagenes/e15.PNG" align="center" height="300" width="400"/>
 
-## Exercise 5: Make a program in which 6 temperatures are entered and determine the average, the most low and the highest.
+</details>
+
+### Exercise 5: Make a program in which 6 temperatures are entered and determine the average, the most low and the highest.
+
+<details close="open">
+  <summary>Details</summary>
+
 
 ```c++
 
@@ -339,8 +353,13 @@ __5.__ Print the maximun temperature.
 
 ### C) Negative temperatures
 <img src="../imagenes/e18.png" align="center" height="300" width="500"/>
+</details>
 
-## Exercise 6: Make a program that reads indefinitely quantities of products and their price, and at the end indicate the total of the invoice.
+### Exercise 6: Make a program that reads indefinitely quantities of products and their price, and at the end indicate the total of the invoice.
+
+<details close="open">
+  <summary>Details</summary>
+
 
 ```c++
 
@@ -386,8 +405,12 @@ __5.__ Print the totalo account.
 
 ### B) Differents products
 <img src="../imagenes/e20.png" align="center" height="171" width="348"/>
+</details>
 
-## Exercise 7: Write a program that performs the conversion from decimal to binary, only for integers greater than 0.
+### Exercise 7: Write a program that performs the conversion from decimal to binary, only for integers greater than 0.
+
+<details close="open">
+  <summary>Details</summary>
 
 ```c++
 
@@ -421,8 +444,12 @@ __2.__ Print the number in binary.
 ### B) Number 50
 <img src="../imagenes/e22.png" align="center" height="47" width="414"/>
 
+</details>
 
-## Exercise 8: Tables of multiplication.
+### Exercise 8: Tables of multiplication.
+
+<details close="open">
+  <summary>Details</summary>
 
 ```c++
 
@@ -471,8 +498,12 @@ __3.__ Print a table of multiplication.
 
 ### B) Table of 50
 <img src="../imagenes/e24.png" align="center" height="284" width="352"/>
+</details>
 
-## Exercise 9: Bisection method.
+### Exercise 9: Bisection method.
+
+<details close="open">
+  <summary>Details</summary>
 
 ```c++
 
@@ -565,3 +596,4 @@ __5.__ Print the root.
 
 ### B) 1-12
 <img src="../imagenes/e26.png" align="center" height="284" width="352"/>
+</details>
