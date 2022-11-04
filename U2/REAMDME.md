@@ -592,8 +592,8 @@ __5.__ Print the root.
 ## Test
 
 ### A) 1-9
-<img src="../imagenes/e25.png" align="center" height="443" width="380"/>
+<img src="../imagenes/e25.png" align="center"/>
 
 ### B) 1-12
-<img src="../imagenes/e26.png" align="center" height="284" width="352"/>
+<img src="../imagenes/e26.png" align="center"/>
 </details>
