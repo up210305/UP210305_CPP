@@ -7,11 +7,11 @@
 </br>
 
 <p align="center"> 
-  <img src="images/giphy1.gif" alt="Sample signal" width="70%" height="70%">
+  <!--<img src="images/giphy3.gif" alt="Sample signal" width="70%" height="70%">-->
 </p>
 
 <!-- TABLE OF CONTENTS -->
-<h2 id="table-of-contents"> :book: Table of Contents</h2>
+<h2 id="table-of-contents"> <img src="images/giphy13.gif" width="10%" height="10%"> Table of Contents <img src="images/giphy13.gif" width="10%" height="10%"></h2>
 
 <details open="open">
   <summary>Contenidos</summary>
@@ -53,7 +53,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- PREREQUISITES -->
-<h2 id="prerequisites"> :fork_and_knife: Hobbies</h2>
+<h2 id="prerequisites"> <img src="images/giphy8.gif" width="10%" height="10%"> Hobbies <img src="images/giphy16.gif" width="11%" height="10%"> </h2>
 <!--
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) <br>
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try) <br>
@@ -69,7 +69,7 @@ Hobbies:
 
 
 <p align="center">
-  <img src="images/hobbiesremovebg.png" alt="Table1: 18 Activities" width="70%" height="70%">        
+  <img src="images/giphy11.gif" alt="Table1: 18 Activities" width="70%" height="70%">        
   <!--<figcaption>Caption goes here</figcaption>-->
 </p>
 
