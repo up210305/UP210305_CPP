@@ -75,7 +75,7 @@ int exceptionalCase(int board[9]) {
 			for (int x = 0; x < 9; x++) 
 				tempBoard[x] = newBoard[x];
 			
-			int match = 0;
+			int match = 0; 
 			//Rotates board so it works with different versions of the same board.
 			for (int box = 0; box < 9; box++) {
 				newBoard[box] = tempBoard[rotatedBoard[box]];
