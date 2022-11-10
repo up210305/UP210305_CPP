@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
  
  
  
-//imprime tablero en pantalla
+//imprime tablero en pantallas
 void dibujarTablero(tablero tabla[n][m])
 {
 printf("------------------------------------\n");

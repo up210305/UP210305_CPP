@@ -92,7 +92,7 @@ int exceptionalCase(int board[9]) {
 }
 
 int getSpace(int board[9], int spaces[4]) {
-	//Gets a random corner or side that's not taken.
+	//Gets a random corner or side that's not taken..
 	bool isSpaceEmpty = false;
 	int y;
 	for (int x = 0; x < 4; x++) {

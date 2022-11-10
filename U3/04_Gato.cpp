@@ -91,7 +91,7 @@ void Tablero(int){
                 }
                 if (columna==2 || columna == 5)
                 {
-                    cout<<"|";
+                    cout<<"|.";
                 }
                 
             }
