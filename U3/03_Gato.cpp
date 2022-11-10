@@ -120,7 +120,7 @@ void outputBoard(int board[9]) {
 }
 
 int main(){
-	int board[9] = {0,0,0,0,0,0,0,0,0}; //Starts empty board.
+	int board[9] = {0,0,0,0,0,0,0,0,0}; //Starts empty board..
 	int possibleWinner;
 	int move;
 	bool isInvalid;

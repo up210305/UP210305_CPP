@@ -39,7 +39,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- ABOUT THE PROJECT -->
-<h2 id="about-the-project"> :pencil: About the repository</h2>
+<h2 id="about-the-project"> <img src="images/giphy18.gif" width="10%" height="10%"> About the repository  <img src="images/giphy18.gif" width="10%" height="10%"></h2>
 
 <p align="justify"> 
   This repository is made as a simple presentation, a way to organize and for the teacher to be able to evaluate the different programs that we carry out throughout the course.
