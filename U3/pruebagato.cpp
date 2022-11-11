@@ -28,8 +28,17 @@ int main(int argc, char *argv[])
    tablero tabla[n][m];
    int opcion;
    int victoria,cont,i,j,p,q;
- 
-   inicio:
+   int modo;
+   cout << "Tic tac toe \n";
+    cout << "1 Singleplayer \n";
+    cout << "2 Multiplayer \n";
+    cout << "Which mode do you want to play (number)? \n";
+    cin >> modo;
+    if (modo == 1){
+        
+    }
+    if (modo==2){
+        inicio:
    cont=0;
    //inicializamos a cero el juego
    for(i=0;i<n;i++)
@@ -118,6 +127,8 @@ int main(int argc, char *argv[])
  
    system("PAUSE");
    return -0;
+    }
+   
 }
  
  
