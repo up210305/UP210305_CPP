@@ -1,246 +1,388 @@
-#include <iostream>
+#include<iostream>
 
-// Use of namespace to avoid std::
 using namespace std;
-void hacertablero();
-int seleccionarJugada();
-bool comprobarjugada(int);
-void colocarjugada(int);
-bool ganar();
 
-char estructuragato[6][11];
-char areaJuego[3][3] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
-int turnojugador = 1;
-int row, col;
-
-int main()
-{
-
-    bool gameover = false;
-    int jugada;
-    bool casillaOcupada = true;
-    int modo;
-    cout << "Tic tac toe \n";
-    cout << "1 Singleplayer \n";
-    cout << "2 Multiplayer \n";
-    cout << "Which mode are you going to play (number)? \n";
-    cin >> modo;
-    if (modo == 1){
-        do
-        {
-            system("clear");
-            if (turnojugador % 2 == !0){
-                do
-                {
-                    hacertablero();
-                    jugada = seleccionarJugada();
-                    casillaOcupada = comprobarjugada(jugada);
-                    if (casillaOcupada == true)
-                    {
-                        system("clear");
-                        cout << "Trye again \n";
-                    }
-                } while (casillaOcupada == true);
-                colocarjugada(jugada);
-                gameover = ganar();
-            }else {
-                hacertablero();
-            }
-        } while (gameover == false and turnojugador < 10);
-        system("clear");
-        hacertablero();
-    }
-    else if (modo == 2)
-    {
-        do
-        {
-            system("clear");
-            do
-            {
-                hacertablero();
-                jugada = seleccionarJugada();
-                casillaOcupada = comprobarjugada(jugada);
-                if (casillaOcupada == true)
-                {
-                    system("clear");
-                    cout << "Trye again \n";
-                }
-            } while (casillaOcupada == true);
-            colocarjugada(jugada);
-            gameover = ganar();
-        } while (gameover == false and turnojugador < 10);
-        system("clear");
-        hacertablero();
-    }
-
-    if (gameover == true)
-    {
-        if ((turnojugador - 1) % 2 == 0)
-        {
-            cout << "Player 2 won" << endl;
-        }
-        else
-        {
-            cout << "Player 1 won" << endl;
-        }
-    }
-    else
-    {
-        cout << "Tie" << endl;
-    }
-    return 0;
+int box[3][3] = {};
+/* 0 - by default
+ * 1 - by user
+ * 4 - by comp
+*/
+int stp_i;
+int stp_j;
+int pos;
+int moves[5];
+int mover = 0;
+int doves[5];
+int dover = 0;
+void head(){
+	cout<<"  +================================================================================================================================================+"<<endl;
+	cout<<"  |---------------------------------------------------------A Tic-Tac-Toe based on C++-------------------------------------------------------------|"<<endl;
+	cout<<"  +================================================================================================================================================+"<<endl;
+}
+void disp(){
+	system("clear");
+	head();
+	cout<<"\n\t\t\t\t\t||==============||==============||==============||";
+	for(int i=0;i<3;++i){
+		cout<<endl<<endl<<"\t\t\t\t\t||";
+		for(int j=0;j<3;++j){
+			cout<<"\t";
+			if(box[i][j] == 0)
+				cout<<"-";
+			if(box[i][j] == 1)
+				cout<<"X";
+			if(box[i][j] == 4)
+				cout<<"O";
+			cout<<"\t||";
+		}
+		cout<<"\n\n\t\t\t\t\t||==============||==============||==============||";
+	}
+	cout<<endl<<endl<<endl;
 }
 
-void hacertablero()
-{
-    row = 0;
-    col = 0;
-    for (int row1 = 0; row1 < 6; row1++)
-    {
-        for (int col1 = 0; col1 < 11; col1++)
-        {
-            if (col1 == 3 || col1 == 7)
-            {
-                estructuragato[row1][col1] = '|';
-            }
-            else if (row1 == 1 || row1 == 3)
-            {
-                estructuragato[row1][col1] = '_';
-            }
-            else if (row1 != 5 && (col1 == 1 || col1 == 5 || col1 == 9))
-            {
-                estructuragato[row1][col1] = areaJuego[row][col];
-                col++;
-                if (col == 3)
-                {
-                    col = 0;
-                    row++;
-                }
-            }
-            else
-            {
-                estructuragato[row1][col1] = ' ';
-            }
-        }
-    }
-    for (int row1 = 0; row1 < 6; row1++)
-    {
-        for (int col1 = 0; col1 < 11; col1++)
-        {
-            if (estructuragato[row1][col1] == 'X')
-            {
-                cout << "\033[0;31m" << estructuragato[row1][col1] << "\033[0m";
-            }
-            else if (estructuragato[row1][col1] == 'O')
-            {
-                cout << "\033[0;32m" << estructuragato[row1][col1] << "\033[0m";
-            }
-            else
-            {
-                cout << estructuragato[row1][col1];
-            }
-        }
-        cout << endl;
-    }
+int killer(){
+	for(int i=0;i<3;++i)
+		for(int j=0;j<3;++j)
+			if(box[i][j] == 0)
+				return 0;
+	return 1;
 }
 
-int seleccionarJugada()
-{
-    int jugada1;
-    do
-    {
-        cout << "Give  me your move: ";
-        cin >> jugada1;
-    } while (jugada1 > 9 && jugada1 < 0);
-    return jugada1;
+int row(int box[3][3]){
+	int t = 0;
+	for(int i=0;i<3;++i){
+		t = 0;
+		for(int j=0;j<3;++j){
+			t += box[i][j];
+		}
+		if(t == 3 || t == 12){
+			return t;
+		}
+	}
+	return 0;
 }
 
-bool comprobarjugada(int jugada)
-{
-    int fila = 0, columna = 0;
-    for (int numjuada = 1; numjuada < 10; numjuada++)
-    {
-        if (jugada == numjuada)
-        {
-            row = fila;
-            col = columna;
-            break;
-        }
-        else
-        {
-            columna++;
-            if (columna == 3)
-            {
-                columna = 0;
-                fila++;
-            }
-        }
-    }
-    if (areaJuego[row][col] == 'O' || areaJuego[row][col] == 'X')
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+int col(int box[3][3]){
+	int t = 0;
+	for(int i=0;i<3;++i){
+		t = 0;
+		for(int j=0;j<3;++j){
+			t += box[j][i];
+		}
+		if(t == 3 || t == 12){
+			return t;
+		}
+	}
+	return 0;
 }
 
-void colocarjugada(int jugada)
-{
-    char valorJugada;
-    if (turnojugador % 2 == 0)
-    {
-        valorJugada = 'X';
-    }
-    else
-    {
-        valorJugada = 'O';
-    }
-    int fila = 0, columna = 0;
-    for (int numjuada = 1; numjuada < 10; numjuada++)
-    {
-        if (jugada == numjuada)
-        {
-            areaJuego[fila][columna] = valorJugada;
-            break;
-        }
-        else
-        {
-            columna++;
-            if (columna == 3)
-            {
-                columna = 0;
-                fila++;
-            }
-        }
-    }
-    turnojugador++;
+int dig(int box[3][3]){
+	int t = 0;
+	for(int i=0;i<3;++i){
+		t += box[i][i];
+	}
+	if(t == 3 || t == 12){
+		return t;
+	}
+	t = box[0][2] + box[1][1] + box[2][0];
+	if(t == 3 || t == 12){
+		return t;
+	}
+	return 0;
 }
 
-bool ganar()
+int check(int b[3][3] = box){
+	int t = row(b) + col(b) + dig(b);
+	return t;
+}
+
+int is_cent(int mov){
+	if(mov == 4)
+		return 1;
+	return 0;
+}
+
+int is_cor(int mov){
+	if((mov == 0)||(mov == 2)||(mov == 6)||(mov == 8))
+		return 1;
+	return 0;
+}
+
+int is_edg(int mov){
+	if((mov == 1)||(mov == 3)||(mov == 5)||(mov == 7))
+		return 1;
+	return 0;
+}
+
+int cal_val(int mov){
+	return box[mov/3][mov%3];
+}
+
+int cal_opp(int mov){
+	return 8 - mov;
+}
+
+int mrk_mov(int mov, int val){
+	if(box[mov/3][mov%3]){
+		cout<<"\nERROR : Over Writing on space";
+		return 0;
+	}
+	box[mov/3][mov%3] = val;
+	if(val == 4)
+		doves[dover++] = mov;
+	return 1;
+}
+
+int mrk_cent(){
+	return mrk_mov(4, 4);
+}
+
+int mrk_opp(){
+	return mrk_mov(cal_opp(pos), 4);
+}
+
+int mrk_cor(){
+	for(int i=0;i<9;++i){
+		if(is_cor(i)){
+			if(cal_val(i) == 0){
+				mrk_mov(i, 4);
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+
+int mrk_edg(){
+	for(int i=0;i<9;++i){
+		if(is_edg(i)){
+			if(cal_val(i) == 0){
+				mrk_mov(i, 4);
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+
+int mrk_btw(int pos1){
+		return mrk_mov((pos1 + pos) - 4, 4);
+}
+
+void set(){
+	cout<<"\n\n\n";
+	do{
+		do{
+			cout<<"\nEnter Row : ";
+			cin>>stp_i;
+			if(cin.fail()){
+				cout<<"Try Entering Integer Values for a change";
+				stp_i = 69;
+				cin.clear();
+				cin.ignore(999,'\n');
+			}
+		}while((stp_i<0)||(stp_i>2)); 
+		
+		do{
+			cout<<"\nEnter Col : ";
+			cin>>stp_j;
+			if(cin.fail()){
+				cout<<"Try Entering Integer Values for a change";
+				stp_j = 69;
+				cin.clear();
+				cin.ignore(999,'\n');
+			}
+		}while((stp_j<0)||(stp_j>2));
+		
+		pos = (stp_i*3)+stp_j;
+		
+	}while(!mrk_mov(pos, 1));
+	moves[mover++] = pos;
+}
+
+int make(){
+	int tmp[3][3] = {};
+	for(int i=0;i<9;++i){
+		if(cal_val(i) == 0){
+			for(int j=0;j<3;++j){
+				for(int k=0;k<3;++k){
+					tmp[j][k] = box[j][k];
+				}
+			}
+			tmp[i/3][i%3] = 4;
+			if(check(tmp)){
+				mrk_mov(i, 4);
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+
+int stop(){
+	int tmp[3][3] = {};
+	for(int i=0;i<9;++i){
+		if(cal_val(i) == 0){
+			for(int j=0;j<3;++j){
+				for(int k=0;k<3;++k){
+					tmp[j][k] = box[j][k];
+				}
+			}
+			tmp[i/3][i%3] = 1;
+			if(check(tmp)){
+				mrk_mov(i, 4);
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+
+int best_move(){
+	if(!make()){
+		if(!stop()){
+			return 0;
+		}
+	}
+	return 1;
+}
+
+void rand_move(){
+	for(int i=0;i<9;++i){
+		if(cal_val(i) == 0){
+			mrk_mov(i, 4);
+			return ;
+		}
+	}
+	cout<<"\nERROR : Couldnt make a rand move";
+}
+
+void loop(){
+	while(1){
+		if(check(box) >= 12){
+			cout<<"\nComp Wins";
+			return ;
+		}
+		if(check(box) > 0){
+			cout<<"\nPlayer Wins : It Would Be Realy Kind Of You If You Could Send It To MaDaR4 :-\n";
+			for(int i=0;i<mover;++i)
+				cout<<moves[i]<<",";
+			cout<<";";
+			for(int i=0;i<dover;++i)
+				cout<<doves[i]<<",";
+			return ;
+		}
+		set();
+		if(check(box) >= 12){
+			cout<<"\nComp Wins";
+			return ;
+		}
+		if(check(box) > 0){
+			cout<<"\nPlayer Wins : It Would Be Realy Kind Of You If You Could Send It To MaDaR4 :-\n";
+			for(int i=0;i<mover;++i)
+				cout<<moves[i]<<",";
+			cout<<";";
+			for(int i=0;i<dover;++i)
+				cout<<doves[i]<<",";
+			return ;
+		}
+		if(killer())
+			return ;
+		if(!best_move()){
+			rand_move();
+		}
+		disp();
+	}
+}
+
+void cor1(){
+	set();
+	if(pos == cal_opp(moves[mover - 2])){
+		if(!mrk_edg()){
+			cout<<"\nERROR : not able to set a edge in cor1";
+		}
+	}
+	else
+	if(!best_move()){
+		if(!mrk_cor()){
+			cout<<"\nERROR : not able to set a corner in cor1";
+		}
+	}
+	disp();
+	loop();
+}
+
+void cse_cor(){
+	mrk_cent();
+	disp();
+	cor1();
+}
+
+void cent1(){
+	set();
+	if(pos == cal_opp(doves[dover - 1])){
+		if(!mrk_cor())
+			cout<<"\nERROR : At cent1 tried to mark cor";
+	}
+	else{
+		stop();
+	}
+	disp();
+	loop();
+}
+
+void cse_cent(){
+	mrk_cor();
+	disp();
+	cent1();
+}
+
+void edg1(){
+	set();
+	if((pos != cal_opp(moves[mover - 2]))&&(is_edg(pos))){
+		if(!mrk_btw(moves[mover - 2])){
+			cout<<"\nERROR : Could'nt Mark Between In edg1";
+		}
+	}
+	else{
+		if(!best_move()){
+			rand_move();
+		}
+	}
+	disp();
+	loop();
+}
+
+void cse_edg(){
+	mrk_cent();
+	disp();
+	edg1();
+}
+
+void begin(){
+	set();
+	if(is_cor(pos)){
+		cse_cor();
+		return ;
+	}
+	if(is_cent(pos)){
+		cse_cent();
+		return ;
+	}
+	if(is_edg(pos)){
+		cse_edg();
+		return ;
+	}
+	else{
+		cout<<"\nERROR 1 : Error in the begining";
+	}
+}
+
+int main ()
 {
-    bool ganar = false;
-    for (int posicion = 0; posicion < 3; posicion++)
-    {
-        if (areaJuego[posicion][0] == areaJuego[posicion][1] && areaJuego[posicion][posicion] == areaJuego[posicion][2])
-        {
-            ganar = true;
-            break;
-        }
-        if (areaJuego[0][posicion] == areaJuego[1][posicion] && areaJuego[0][posicion] == areaJuego[2][posicion])
-        {
-            ganar = true;
-            break;
-        }
-    }
-    if (areaJuego[0][0] == areaJuego[1][1] && areaJuego[0][0] == areaJuego[2][2])
-    {
-        ganar = true;
-    }
-    else if (areaJuego[2][0] == areaJuego[1][1] && areaJuego[2][0] == areaJuego[0][2])
-    {
-        ganar = true;
-    }
-    return ganar;
+	disp();
+	cout<<"\nBEWARE 1. YOU ARE 'X'"<<"\n       2. Here 0 indexing system is followed";
+	begin();
+	cout<<"\nEnd Of The Game\n\n\n\n\n";
+	return 0;
 }
