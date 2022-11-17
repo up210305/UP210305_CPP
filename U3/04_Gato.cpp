@@ -1,6 +1,6 @@
-#include<iostream>
-#include<conio.h>
-#include<stdlib.h>
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
 using namespace std;
 
 char square[9];
@@ -13,7 +13,7 @@ int main()
 
     int choice, mark, p, q, r, k, j=1, win=0, mark_2;
 
-    cout<<"\033[1;31m"<<"*************** Tic Tac Toe ****************\n\n";
+    cout<<"\033[1;31m"<<"\n\n*************** Tic Tac Toe ****************\n\n";
      
     cout<<"\033[0;36m"<<" Games Modes \n\n Enter 1 for player vs computer. \n Enter 2 for player vs player." << "\033[1;36m"<< "\n Your choice -> ";             //Enter number of player.
     cin>>choice;
@@ -63,7 +63,7 @@ int main()
      
 	else if(choice==1)                                                                      // For 1 player game
     {
-        cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For player 2 - (O)";
+        cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For Computer - (O)";
          
 		    while(win ==0)
             {

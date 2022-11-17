@@ -70,7 +70,7 @@ int main()
      
 	else if(choice==1)                                                                      // For 1 player game
     {
-        cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For player 2 - (O)";
+        cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For Computer - (O)";
          
 		    while(win ==0)
             {
