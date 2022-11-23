@@ -12,10 +12,10 @@
 
 </div align="center">
 
-[Explanation of the game](#game)   
+[Explanation of the game](#explanation-of-the-game)   
 [Instructions for execution and use](#instructions-for-execution-and-use)   
 [Flowchart](#flowchart)   
-[Tests of the game](#-tests)   
+[Tests of the game](#tests-of-the-game)   
 [Conclusion](#conclusion)
 
 <div align="center">
@@ -26,6 +26,8 @@
 
 It's a C++ game, it has 2 modes of playing whether player vs player or player vs computer. For 2 players mode it will directly take the input from users on which position they want to mark and directly add their mark in the game sheet. For 1 player vs Computer mode it will take input from user and for computer turn it will use a random function and will check wheather the number is repeated or not, if repeated it will call the random function again and take new value as the computer mark.
 
+[Index](#index)
+
 <div align="center">
 
 
@@ -33,7 +35,6 @@ It's a C++ game, it has 2 modes of playing whether player vs player or player vs
 
 </div align="center">
 
-[Index](#index)
 
 In order to enjoy the single player and multiplayer game modes, you first need to follow the steps below depending on the operating system.
 <h2> Windox </h2>
