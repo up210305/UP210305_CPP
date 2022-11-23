@@ -100,7 +100,7 @@ gcc 04_Gato.c -o 04_Gato
 
 </div align="center">
 
-<img src="../imagenes/diagrama1.drawio.png" align="center">
+<img src="../imagenes/diagrama2.drawio.png" align="center">
 
 [Index](#index)
 
