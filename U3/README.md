@@ -1,227 +1,160 @@
-<h1 align="center"> Content</h1>
+<h1 align="center"> Tic Tac Toe</h1>
 
-### Game: A program that you can play tic tac toe called in spanish "gato". In this game you can choose to play in two modes player vs computer or player vs player.
+<div align="center">
 
-<details open="closed" >
+<img src="../images/giphy20.gif">
 
-```c++
-#include<iostream>
-#include<conio.h>
-#include<stdlib.h>
-using namespace std;
+</div align="center">
 
-char square[9];
-void print_board();
-int check_win();
-int computer_mark();
+<div align="center">
 
-int main()
-{
+## 📌 __Index__
 
-    int choice, mark, p, q, r, k, j=1, win=0, mark_2;
+</div align="center">
 
-    cout<<"\033[1;31m"<<"*************** Tic Tac Toe ****************\n\n";
-     
-    cout<<"\033[0;36m"<<" Games Modes \n\n Enter 1 for player vs computer. \n Enter 2 for player vs player." << "\033[1;36m"<< "\n Your choice -> ";             //Enter number of player.
-    cin>>choice;
-     
-	for(k=1;k<=9; k++)                                                                   
-    { 
-        square[k] = '-';
-    }
-    print_board();
-    
-        if(choice == 2)                                                                    //For 2 player
-            {
-                cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For player 2 - (O)";
-  
-                while(win == 0)
-                {
-                    cout<< "\033[1;36m"<<"\n Player 1 enter your move, in which box you want to mark -> ";        //Player1 move
-                    cin>>mark;
-                    square[mark] = 'X';
-                    print_board();
-                     
-                    win = check_win();
-    	                if (win==1)
-                        {
-                           cout<<"\033[1;32m"<<"\n Player 1 win!!";
-                           exit(0);
-                        }
-                        else if (win==2)
-                        {
-                            cout<<"\033[1;30m"<<"\n Its a tie!!";
-                            exit(0);
-                        }
-           
-                        cout<< "\033[1;36m"<<"\n Player 2 enter your move, in which box you want to mark -> ";        //Player 2 move
-                        cin>>mark;
-                        square[mark] = 'O' ;
-                        print_board();
-                            
-                        win = check_win();   
-	     			    if (win==1)
-                        {
-                            cout<< "\033[0;31m"<<"\n Player 2 win!!";
-                            exit(0);
-                        }
-                }
-           }
-     
-	else if(choice==1)                                                                      // For 1 player game
-    {
-        cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For Computer - (O)";
-         
-		    while(win ==0)
-            {
-                cout<< "\033[1;36m"<<"\n Player 1 enter your move, in which box you want to mark -> ";           //Player move
-                cin>>mark;
-                   
-                square[mark] = 'X' ;
-                j++;
-                print_board();
-                  
-                win = check_win();
-			        if(win==1)
-                    {
-                        cout<<"\033[1;32m"<<"\n Player win";
-                        exit(0);
-                    }
-                 
-				    else if(win==2)
-                    {
-                        cout<<"\033[1;30m"<<"\n Its a Tie";
-                        exit(0);
-                    }
-              
-                mark_2 = computer_mark();                                               
-                for(int i=1;i<=j;i++)                                                   //To check repetition of move to avoid overwrite.
-                {
-				    if(square[mark_2]== '-')
-				    {
-				   	    mark=mark_2;  
-				   	    break;
-				    }        
-				    else
-			        {
-				        mark_2 = computer_mark();
-		   		    }
-			    }
-                square[mark] = 'O' ;
-                j++;
-                cout<< "\033[1;36m"<<"\n Computer's move -> "<<mark<<"\n";                                                 //Computer move 
-                print_board();
-              
-                win = check_win();
-			    if(win==1)
-                {
-                    cout<< "\033[0;31m"<<"\n Computer wins";
-                    exit(0);
-                }
-     
-	       }
-	   }
-	   else
-        {
-            cout<<"\n Invalid Input";
-        }
-	getch();
-    return 0;
-}
+[Instructions for execution and use](#instructions-for-execution-and-use)   
+[Flowchart](#flowchart)   
+[Tests of the game](#-tests)   
+[Conclusion](#conclusion)
 
+<div align="center">
 
-void print_board()
+## 🎲 __Explanation of the Game__
 
- {
-       cout <<"\033[0;35m"<< "\n   |   | " << endl; 
-       cout <<"\033[0;35m"<< " " << square[1] << " | " << square[2] << " | " << square[3] << endl; 
-       cout <<"\033[0;35m"<< "___|___|___" << endl;
-       cout <<"\033[0;35m"<< "   |   | " << endl; 
-       cout <<"\033[0;35m"<< " " << square[4] << " | " << square[5] << " | " << square[6] << endl; 
-       cout <<"\033[0;35m"<< "___|___|___" << endl; 
-       cout <<"\033[0;35m"<< "   |   | " << endl; 
-       cout <<"\033[0;35m"<< " " << square[7] << " | " << square[8] << " | " << square[9] << endl; 
-       cout <<"\033[0;35m"<< "   |   | " << endl << endl;
- }
+</div align="center">
 
+It's a C++ game, it has 2 modes of playing whether player vs player or player vs computer. For 2 players mode it will directly take the input from users on which position they want to mark and directly add their mark in the game sheet. For 1 player vs Computer mode it will take input from user and for computer turn it will use a random function and will check wheather the number is repeated or not, if repeated it will call the random function again and take new value as the computer mark.
 
-int check_win()
-{
+<div align="center">
 
-/*
-*********************************************
-    FUNCTION TO RETURN GAME STATUS
-    1 FOR GAME IS OVER WITH RESULT
-    0 FOR GAME IS IN PROGRESS
-    2 GAME IS OVER AND NO RESULT
-**********************************************/
-    if (square[1] == square[2] && square[2] == square[3] && square[3] != '-')
-        
-        return 1;
-    else if (square[4] == square[5] && square[5] == square[6] && square[6] != '-')
+## __📓&nbsp;Instructions for execution and use__
 
-        return 1;
-    else if (square[7] == square[8] && square[8] == square[9] && square [9] != '-')
+</div align="center">
 
-        return 1;
-    else if (square[1] == square[4] && square[4] == square[7] && square [7] != '-')
-    
-        return 1;
-    else if (square[2] == square[5] && square[5] == square[8] && square [8] != '-')
+In order to enjoy the single player and multiplayer game modes, you first need to follow the steps below depending on the operating system.
+<h2> Windox </h2>
 
-        return 1;
-    else if (square[3] == square[6] && square[6] == square[9] && square [9] != '-')
+1. Download or clone my repo with the following command in the terminal:
+   
+~~~
+git clone https://github.com/UP210052/UP210052_CPP.git mi repo
+~~~
 
-        return 1;
-    else if (square[1] == square[5] && square[5] == square[9] && square [9] != '-')
+2. Download and install the compiler in this link https://sourceforge.net/projects/mingw/files/OldFiles/ 
 
-        return 1;
-    else if (square[3] == square[5] && square[5] == square[7] && square [7] != '-')
+3. Open the terminal at the direction of the file with the command:
 
-        return 1;
-    else if (square[1] != '-' && square[2] != '-' && square[3] != '-' 
-            && square[4] != '-' && square[5] != '-' && square[6] != '-' 
-            && square[7] != '-' && square[8] != '-' && square[9] != '-')
-        return 2; 
-    else
-        return 0;
-}
+~~~
+cd C:\Documents\...
+~~~
 
+4. To compile use command:
 
-int computer_mark()
-{
-    return (rand()%10);
-}
+~~~
+gcc  04_Gato.cpp -o 04_Gato.exe
+~~~
 
-```
-## Explanation of the Game
->It's a C++ game, it has 2 modes of playing whether player vs player or player vs computer. For 2 players mode it will directly take the input from users on which position they want to mark and directly add their mark in the game sheet. For 1 player vs Computer mode it will take input from user and for computer turn it will use a random function and will check wheather the number is repeated or not, if repeated it will call the random function again and take new value as the computer mark.
+5. To run type this code:
 
-## Test
+~~~
+04_Gato.exe
+~~~
 
-### A) Menu of Game
+<h2> Linux (Ubuntu)</h2>
+
+1. Download or clone my repo with the following command in the terminal:
+   
+~~~
+"git clone https://github.com/UP210052/UP210052_CPP.git"
+~~~
+
+2. Install GNU c/c++ compiler, open the terminal and type:
+
+~~~
+$ sudo apt-get update
+$ sudo apt-get install build-essential manpages-dev
+~~~
+
+3. To compile this program, type:
+
+~~~
+gcc 04_Gato.c -o 04_Gato
+~~~
+
+4. To run this program, type:
+   
+~~~
+./04_Gato
+~~~
+
+[Return to index](#index)
+
+<div align="center">
+
+## 🌐 __Flowchart__
+
+</div align="center">
+
+<img src="../imagenes/diagrama.drawio.png" align="center">
+
+[Return to index](#index)
+
+<div align="center">
+
+## 🎮 __Test__
+
+</div align="center">
+
+<h2>Things to consider</h2>
+
+- Don't write numbers with decimal point or letters when the game ask you for a move in the board.  
+- You can't choose which figure you want beetween "X" and "O".
+- In single player mode the player is "X" and the computer is "O".  
+- In multiplayer mode, player 1 is "X" and player two is "O".
+
+<h2 align="center"> Player vs Computer</h2>
+
+<div align="center">
+
+First, the program shows you a menu with the existing game modes that you can play. 
 
 <img src="../imagenes/e27.PNG" align="center"/>
 
-### B) Player vs Computer, player win
+After selecting the first option, a board will appear where we can enter the moves. 
 
 <img src="../imagenes/e28.PNG"  align="center"/>
 
-### C) Player vs Computer, computer win
+Then a game will start. First the player starts on square 3 while the computer made a random move on square 6.
 
 <img src="../imagenes/e29.PNG" align="center"/>
 
-### D) Player vs Computer, tie
+Then on my second move I chose square 9 and the computer answered with square 7.  
 
 <img src="../imagenes/e30.PNG" align="center"/>
 
-### E) Player vs Player, player 1 win
+After that i decided to choose cell number 4 while the computer chose cell 5.
 
 <img src="../imagenes/e31.PNG" align="center"/>
 
-### F) Player vs Player, player 2 win
+My fourth move is in cell 2. The computer counters by putting their move in cell 1 to prevent me from winning.  
+
 <img src="../imagenes/e32.PNG" align="center"/>
 
-### G) Player vs Player, tie
+As there were only 2 squares left at the end and it was impossible for the player or the computer to win, it ended in a draw.
 
 <img src="../imagenes/e33.PNG" align="center"/>
+
+[Return to index](#index)
+
+</div align="center">
+
+
+## 📝 __Conclusion__
+
+</div align="center">
+
+I think that this project was complicated in several very important aspects that had to be implicit in the program for it to go well. The project became difficult for me each time we advanced, for example at the beginning I had complications with the board, how to create and develop it, another difficult point was the use of matrices in the code that I still do not understand 100 percent.
+The most complicated part was the implementation of the artificial intelligence function for the "player vs computer" mode, because although I could imagine how I could do it in my mind, I couldn't get my thoughts into a functional code for the artificial intelligence.
+Finally the front-end part was the easiest because you can't do much maybe more than add colors, but I would have liked to learn and investigate more decoration tools to make the front-end display cleaner, more organized and colorful. 
+
+[Return to index](#index)
