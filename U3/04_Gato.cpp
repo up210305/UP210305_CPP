@@ -1,6 +1,9 @@
+// Libraries used in the program.
 #include <iostream>
 #include <conio.h>
 #include <stdlib.h>
+
+// Use of namespace to avoid std::
 using namespace std;
 
 char square[9];
@@ -12,7 +15,7 @@ int main()
 {
 
     int choice, mark, p, q, r, k, j=1, win=0, mark_2;
-
+    
     cout<<"\033[1;31m"<<"\n\n*************** Tic Tac Toe ****************\n\n";
      
     cout<<"\033[0;36m"<<" Games Modes \n\n Enter 1 for player vs computer. \n Enter 2 for player vs player." << "\033[1;36m"<< "\n Your choice -> ";             //Enter number of player.
@@ -24,6 +27,7 @@ int main()
     }
     print_board();
     
+        //If you choose mode 2 you will play player vs player 
         if(choice == 2)                                                                    //For 2 player
             {
                 cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For player 2 - (O)";
@@ -60,7 +64,7 @@ int main()
                         }
                 }
            }
-     
+    //If you choose mode 1 you will play player vs computer 
 	else if(choice==1)                                                                      // For 1 player game
     {
         cout<<"\033[1;32m"<<" \n For player 1 - (X)       "<< "\033[0;31m"<< "   For Computer - (O)";
@@ -69,7 +73,6 @@ int main()
             {
                 cout<< "\033[1;36m"<<"\n Player 1 enter your move, in which box you want to mark -> ";           //Player move
                 cin>>mark;
-                   
                 square[mark] = 'X' ;
                 j++;
                 print_board();
@@ -100,6 +103,7 @@ int main()
 				        mark_2 = computer_mark();
 		   		    }
 			    }
+			    
                 square[mark] = 'O' ;
                 j++;
                 cout<< "\033[1;36m"<<"\n Computer's move -> "<<mark<<"\n";                                                 //Computer move 
@@ -122,9 +126,8 @@ int main()
     return 0;
 }
 
-
+//Function to print the board and replace 
 void print_board()
-
  {
        cout <<"\033[0;35m"<< "\n   |   | " << endl; 
        cout <<"\033[0;35m"<< " " << square[1] << " | " << square[2] << " | " << square[3] << endl; 
@@ -137,17 +140,15 @@ void print_board()
        cout <<"\033[0;35m"<< "   |   | " << endl << endl;
  }
 
-
+/*
+Function to return the status of the game
+0 = for game is in progress 
+1 = for game is over with result
+2 = for game is over and no result
+*/
 int check_win()
 {
 
-/*
-*********************************************
-    FUNCTION TO RETURN GAME STATUS
-    1 FOR GAME IS OVER WITH RESULT
-    0 FOR GAME IS IN PROGRESS
-    2 GAME IS OVER AND NO RESULT
-**********************************************/
     if (square[1] == square[2] && square[2] == square[3] && square[3] != '-')
         
         return 1;
@@ -180,7 +181,7 @@ int check_win()
         return 0;
 }
 
-
+//Function to a random move for computer
 int computer_mark()
 {
     return (rand()%10);
