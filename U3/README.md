@@ -42,7 +42,7 @@ In order to enjoy the single player and multiplayer game modes, you first need t
 1. Download or clone my repo with the following command in the terminal:
    
 ~~~
-git clone https://github.com/UP210052/UP210052_CPP.git mi repo
+git clone https://github.com/up210305/UP210305_CPP.git
 ~~~
 
 2. Download and install the compiler in this link https://sourceforge.net/projects/mingw/files/OldFiles/ 
