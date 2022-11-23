@@ -105,7 +105,7 @@ gcc 04_Gato.c -o 04_Gato
 
 <div align="center">
 
-## __🎮&nbsp;Test of the game__
+## __🎮&nbsp;Tests of the game__
 
 </div align="center">
 
@@ -148,9 +148,10 @@ As there were only 2 squares left at the end and it was impossible for the playe
 
 <img src="../imagenes/g33.PNG" align="center"/>
 
-[Index](#index)
 
 </div align="center">
+
+[Index](#index)
 
 
 ##  __📝&nbsp;Conclusion__
