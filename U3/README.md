@@ -37,7 +37,7 @@ It's a C++ game, it has 2 modes of playing whether player vs player or player vs
 
 
 In order to enjoy the single player and multiplayer game modes, you first need to follow the steps below depending on the operating system.
-<h2> Windox </h2>
+<h2> Windows </h2>
 
 1. Download or clone my repo with the following command in the terminal:
    
