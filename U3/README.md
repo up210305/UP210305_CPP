@@ -118,31 +118,31 @@ gcc 04_Gato.c -o 04_Gato
 
 First, the program shows you a menu with the existing game modes that you can play. 
 
-<img src="../imagenes/e27.PNG" align="center"/>
+<img src="../imagenes/g27.PNG" align="center"/>
 
 After selecting the first option, a board will appear where we can enter the moves. 
 
-<img src="../imagenes/e28.PNG"  align="center"/>
+<img src="../imagenes/g28.PNG"  align="center"/>
 
 Then a game will start. First the player starts on square 3 while the computer made a random move on square 6.
 
-<img src="../imagenes/e29.PNG" align="center"/>
+<img src="../imagenes/g29.PNG" align="center"/>
 
 Then on my second move I chose square 9 and the computer answered with square 7.  
 
-<img src="../imagenes/e30.PNG" align="center"/>
+<img src="../imagenes/g30.PNG" align="center"/>
 
 After that i decided to choose cell number 4 while the computer chose cell 5.
 
-<img src="../imagenes/e31.PNG" align="center"/>
+<img src="../imagenes/g31.PNG" align="center"/>
 
 My fourth move is in cell 2. The computer counters by putting their move in cell 1 to prevent me from winning.  
 
-<img src="../imagenes/e32.PNG" align="center"/>
+<img src="../imagenes/g32.PNG" align="center"/>
 
 As there were only 2 squares left at the end and it was impossible for the player or the computer to win, it ended in a draw.
 
-<img src="../imagenes/e33.PNG" align="center"/>
+<img src="../imagenes/g33.PNG" align="center"/>
 
 [Return to index](#index)
 
