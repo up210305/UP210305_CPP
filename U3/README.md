@@ -8,10 +8,11 @@
 
 <div align="center">
 
-## 📌 __Index__
+##  __📌&nbsp;Index__
 
 </div align="center">
 
+[Explanation of the game](#game)   
 [Instructions for execution and use](#instructions-for-execution-and-use)   
 [Flowchart](#flowchart)   
 [Tests of the game](#-tests)   
@@ -19,7 +20,7 @@
 
 <div align="center">
 
-## 🎲 __Explanation of the Game__
+##  __🎲&nbsp;Explanation of the Game__
 
 </div align="center">
 
@@ -27,9 +28,12 @@ It's a C++ game, it has 2 modes of playing whether player vs player or player vs
 
 <div align="center">
 
+
 ## __📓&nbsp;Instructions for execution and use__
 
 </div align="center">
+
+[Index](#index)
 
 In order to enjoy the single player and multiplayer game modes, you first need to follow the steps below depending on the operating system.
 <h2> Windox </h2>
@@ -87,21 +91,21 @@ gcc 04_Gato.c -o 04_Gato
 ./04_Gato
 ~~~
 
-[Return to index](#index)
+[Index](#index)
 
 <div align="center">
 
-## 🌐 __Flowchart__
+## __🌐&nbsp;Flowchart__
 
 </div align="center">
 
 <img src="../imagenes/diagrama.drawio.png" align="center">
 
-[Return to index](#index)
+[Index](#index)
 
 <div align="center">
 
-## 🎮 __Test__
+## __🎮&nbsp;Test of the game__
 
 </div align="center">
 
@@ -144,12 +148,12 @@ As there were only 2 squares left at the end and it was impossible for the playe
 
 <img src="../imagenes/g33.PNG" align="center"/>
 
-[Return to index](#index)
+[Index](#index)
 
 </div align="center">
 
 
-## 📝 __Conclusion__
+##  __📝&nbsp;Conclusion__
 
 </div align="center">
 
@@ -157,4 +161,4 @@ I think that this project was complicated in several very important aspects that
 The most complicated part was the implementation of the artificial intelligence function for the "player vs computer" mode, because although I could imagine how I could do it in my mind, I couldn't get my thoughts into a functional code for the artificial intelligence.
 Finally the front-end part was the easiest because you can't do much maybe more than add colors, but I would have liked to learn and investigate more decoration tools to make the front-end display cleaner, more organized and colorful. 
 
-[Return to index](#index)
+[Index](#index)
