@@ -77,12 +77,12 @@ int main(){
 
         print_board();
         drawing_board();
-        cout << " " << " " << "1" << " " << " "  << " " << "2" << " " << " " << " "  << "3" << " " << " " << " "  << "4" << " " << " " << " "  << "5" << " " << " " << " "  << "6" << " " << " " << " "  << "7" ;
+        cout <<"\033[0;31m"<< " " << " " << "1" << " " << " "  << " " << "2" << " " << " " << " "  << "3" << " " << " " << " "  << "4" << " " << " " << " "  << "5" << " " << " " << " "  << "6" << " " << " " << " "  << "7" ;
         cout << endl;
 
-        cout << "This is Connect 4." << endl ;      //INSTRUCTIONS
-        cout << "Type the column you want your piece to go into, then press enter." << endl ;
-        cout << "If you can make 4 in a row vertically, horizontally, or diagonally, you win!" << endl << endl ;
+        cout<<"\033[0;36m" << "This is Connect 4." << endl ;      //INSTRUCTIONS
+        cout<<"\033[0;36m" << "Type the column you want your piece to go into, then press enter." << endl ;
+        cout<<"\033[0;36m" << "If you can make 4 in a row vertically, horizontally, or diagonally, you win!" << endl << endl ;
 
 
         for ( ; 1 == 1; )             //main game loop
