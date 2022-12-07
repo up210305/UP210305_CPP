@@ -250,6 +250,7 @@ void loading(){
         break;
         if (c == 7)
             c = 0;
+            // sequences to loading screen https://unicode-table.com/en/blocks/braille-patterns/
             std::cout << fcolor[c] << "\e[?25l\r\t\t   \u280B" << std::flush<<"               ";
         std::this_thread::sleep_for(0.10s);
         std::cout << "\r\t\t   \u2819" << std::flush<<"               ";
@@ -261,8 +262,10 @@ void loading(){
         std::cout << "\r\t\t   \u2826" << std::flush<<"               ";
         std::this_thread::sleep_for(0.10s);
         std::cout << "\r\t\t   \u2807\033[0m" << std::flush<<"               ";
-        std::this_thread::sleep_for(0.10s);
+        std::this_thread::sleep_for(0.10s); // deja congelado el ciclo x seg
     }
+    std::cout << "\r\t\t   \u2705\033[0m" << std::flush<<"               ";
+    std::this_thread::sleep_for(1s);
     std::cout<<"\e[?25h\n\n";
     return;
 }
